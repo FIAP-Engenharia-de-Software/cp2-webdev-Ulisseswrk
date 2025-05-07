@@ -8,9 +8,17 @@
 // - Retornar `"Errou! Tente novamente!"` se o palpite estiver incorreto.
 
 function adivinharNumero(max, palpite) {
-  // TODO: implementar função
+  let numeroSorteado = Math.max(max)
+  let verificador = True
+  if (palpite == numeroSorteado){
+    verificador = True
+  } 
+  else{
+    verificador = False
+  }
 }
-
+let n1 = 5
+let max = 10
 
 // NÃO REMOVA O CÓDIGO ABAIXO
 module.exports = { adivinharNumero };

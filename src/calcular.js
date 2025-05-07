@@ -10,9 +10,24 @@
 // - Executar a operação correta e retornar o resultado;
 
 function calcular(num1, num2, operador) {
-  // TODO: implementar função
+  if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+    return "Erro: parâmetros inválidos";
+  }
+
+  if (operador === '+') {
+    return num1 + num2;
+  } else if (operador === '-') {
+    return num1 - num2;
+  } else if (operador === '*') {
+    return num1 * num2;
+  } else if (operador === '/') {
+    if (num2 === 0) {
+      return "Erro: divisão por zero";
+    }
+    return num1 / num2;
+  } else {
+    return "Erro: operação inválida";
+  }
 }
-
-
 //NÃO REMOVA O CÓDIGO ABAIXO
 module.exports = { calcular };
